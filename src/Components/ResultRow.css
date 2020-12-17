@@ -1,0 +1,28 @@
+.result-row{
+    display: flex;
+    width: 100%;
+    padding: 8px 5px;
+    min-height: 10px;
+    margin: 15px 0;
+    background-color: white;
+}
+
+.result-cell {
+    padding: 3px 5px;
+    text-align: center;
+}
+
+.result-cell:not(:last-child) {
+    border-right: 2px solid #7e7373;
+}
+
+.result-cell:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-cell h4 {
+    font-size: 16px;
+    color: crimson;
+}

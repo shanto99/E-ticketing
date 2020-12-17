@@ -1,0 +1,36 @@
+.filter-section {
+    height: 10vh;
+    background-color: #9f5667;
+    margin-bottom: 3vh;
+}
+
+.filter-row {
+   display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.filter-column {
+    flex: 2;
+    padding: 10px;
+    justify-content: center;
+}
+
+.filter-column p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.filter-row .button-column {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-picker input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}

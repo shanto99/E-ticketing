@@ -1,0 +1,17 @@
+.seat-info-row {
+    display: flex;
+}
+
+.seat-info-row {
+    border-top: 2px dotted black;
+}
+
+.seat-info-row:last-child {
+    border-bottom: 2px dotted black;
+}
+
+.seat-info-row div {
+    flex: 1;
+    flex-shrink: 0;
+    text-align: center;
+}

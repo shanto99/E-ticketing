@@ -1,0 +1,42 @@
+.seat-status-signs {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seat-status-signs div {
+    display: flex;
+}
+
+.seat-status-signs i {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.booked-male i {
+    color: purple;
+}
+
+.booked-female i {
+    color: deeppink;
+}
+
+.blocked i {
+    color: #1d1b1b;
+}
+
+.selected i {
+    color: green;
+}
+
+.sold-male i {
+    color: orangered;
+}
+
+.sold-female i {
+    color: hotpink;
+}
+
+.available i {
+    color: cadetblue;
+}

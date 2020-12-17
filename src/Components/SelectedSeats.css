@@ -1,0 +1,19 @@
+.selected-seats {
+
+}
+
+.selected-seats h4 {
+    font-size: 20px;
+    color: crimson;
+    margin-bottom: 20px;
+}
+
+.cost-row {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #736a6a;
+}
+
+.cost-row .value {
+    font-weight: bold;
+}

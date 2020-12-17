@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
+import Search from "./Components/Search";
+import SeatDetail from "./Components/SeatDetail";
+
+import Database from "./API/Database";
+import Functions from "./API/DBFunctions";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App:React.FC = () => {
+    let database = null;
+    let [districts, setDistricts] = useState<any>([]);
+    useEffect(() => {
+        database = new Database();
+        let districts = Functions.getDistricts();
+        setDistricts(districts);
+    },[setDistricts]);
+    return (
+    <Router>
+        <div className="App">
+              <Switch>
+                  <Route path="/seat-detail">
+                      <SeatDetail/>
+                  </Route>
+                  <Route path="/">
+                      <Search districts={districts}/>
+                  </Route>
+              </Switch>
+
+        </div>
+    </Router>
+    );
 }
 
 export default App;
